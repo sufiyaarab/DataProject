@@ -1,0 +1,283 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ad8052;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ad8052;
+    padding: 0.5rem 3rem;
+    font-family: 'Times New Roman', serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-style: italic;
+    color: #000;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: transparent; /* Makes the dropdown button transparent */
+    border: none; /* Removes any border around the button */
+    color: #333; /* Sets text color to match other links */
+    font-size: 1.2rem; /* Matches font size of other header links */
+    font-family: 'Times New Roman', serif;
+    cursor: pointer;
+    padding: 0; /* Removes padding to make it look like a link */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f4e9; /* Background color for dropdown links */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Optional shadow for dropdown content */
+    z-index: 1;
+    border: 1px solid #ddd; /* Optional border for dropdown content */
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: transparent; /* Ensures dropdown link background is transparent */
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Hover effect for dropdown items */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Language Toggle */
+.lang-toggle {
+    display: flex;
+    position: relative;
+    width: 80px;        /* Keep the width the same */
+    height: 24px;       /* Reduce the height for a more compact look */
+    background: #ddd;
+    border-radius: 12px; /* Adjust the border-radius to match the new height */
+    margin-right: 1rem;
+    overflow: hidden;
+}
+
+.lang-toggle button {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #333;
+    font-size: 0.8rem;   /* Smaller font size */
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    line-height: 24px;   /* Center text vertically */
+}
+
+/* Adjusted .slider for smaller active circle effect */
+.lang-toggle .slider {
+    position: absolute;
+    top: 3px;            /* Position slightly lower to center within the container */
+    left: 3px;
+    width: 36px;         /* Slightly smaller width */
+    height: 18px;        /* Slightly smaller height */
+    background-color: #fff;
+    border-radius: 10px; /* Smaller radius for a circular look */
+    transition: transform 0.3s ease;
+}
+
+.lang-toggle button.active {
+    color: #000;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+/* Login Button in Header */
+.login-button {
+    background-color: #8B5A2B;  /* Brown background color */
+    color: #000;                /* Black text color */
+    padding: 0.3rem 1.4rem;     /* Padding for size */
+    border-radius: 10px;        /* Rounded corners */
+    border: 2px solid #8B5A2B;  /* Border to match the background color */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for raised effect */
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.login-button:hover {
+    background-color: #7a4f26;  /* Darker shade for hover effect */
+    border-color: #7a4f26;
+}
+
+/* Main Content Divider */
+.content-divider {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px); /* Full viewport height minus header height */
+}
+
+.left-section {
+    flex: 1;
+    background-color: #f9f4e9; /* Beige color for left section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.right-section {
+    flex: 1;
+    background-color: #fff; /* White color for right section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Login Form Styling */
+/* Login Form Container */
+.login-form {
+    background-color: #d9d9d9;      /* Light gray background */
+    padding: 2rem;                  /* Padding for spacing */
+    border-radius: 10px;            /* Rounded corners */
+    width: 300px;                   /* Fixed width */
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Login Form Title */
+.login-form h2 {
+    font-family: monospace;        /* Monospace font for title */
+    font-size: 1.5rem;             /* Adjust font size as needed */
+    color: #333;                   /* Dark color for text */
+    margin-bottom: 1rem;
+    text-align: left;              /* Align text to the left */
+    margin-left: 0.5rem;           /* Optional: small left margin for spacing */
+}
+
+
+/* Input Fields */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: none;                   /* Removes border */
+    background-color: #ffffff;      /* White background */
+    font-size: 1rem;
+    color: #333;                    /* Dark color for text */
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1); /* Inner shadow */
+}
+
+.login-form input[type="email"]::placeholder,
+.login-form input[type="password"]::placeholder {
+    color: #999;                    /* Gray placeholder text */
+    font-weight: normal;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    color: #3366cc;                /* Blue color for link */
+    font-size: 0.6rem;
+    text-decoration: none;
+    display: block;                /* Make it a block element to allow alignment */
+    text-align: right;             /* Align text to the right */
+    margin-top: -0.2rem;            /* Adjust the spacing as needed */
+    margin-right: 0.2rem;          /* Slight right margin to keep it aligned with input */
+}
+
+
+/* Login Button */
+.login-form button[type="submit"] {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #333;         /* Dark gray background */
+    color: #ffffff;                 /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+/* "Not a Member?" Section */
+.sign-up {
+    margin-top: 1.6rem;
+    color: #333;                    /* Dark color for text */
+    font-size: 1.1rem;
+}
+
+.sign-up button {
+    background-color: #333;      /* Dark brown background */
+    color: #fff;                    /* White text */
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Button shadow for raised effect */
+}
+
+/* "Not a Member?" Text Style */
+.sign-up p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.bear-image {
+    width: 400px;
+    height: auto;
+}

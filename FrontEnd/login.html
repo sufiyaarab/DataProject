@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knight & Shield Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Knight&Shield</div>
+        <nav>
+            <a href="#">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Insurances ▾</button>
+                <div class="dropdown-content">
+                    <a href="#">Health Insurance</a>
+                    <a href="#">Life Insurance</a>
+                    <a href="#">Car Insurance</a>
+                </div>
+            </div>
+            <a href="#">Contact</a>
+            
+            <div class="lang-toggle">
+                <button id="en-btn">EN</button>
+                <button id="fr-btn">FR</button>
+                <div class="slider"></div>
+            </div>
+            
+            <a href="#" class="login-button">Login</a>
+        </nav>
+    </header>
+
+    <!-- Main container with two sections for login and mission statement -->
+    <main class="content-divider">
+        <section class="left-section">
+            <div class="login-form">
+                <h2>LOGIN</h2>
+                <form>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <a href="#" class="forgot-password">forgot password?</a>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="sign-up">
+                    <p>Not a Member?</p>
+                    <button>Sign Up</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="right-section">
+            <div class="mission-statement">
+                <img src="bears.png" alt="Cute Bear with Shield" class="bear-image">
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const enBtn = document.getElementById('en-btn');
+        const frBtn = document.getElementById('fr-btn');
+        const slider = document.querySelector('.slider');
+
+        enBtn.addEventListener('click', () => {
+            slider.style.transform = 'translateX(0)';
+            enBtn.classList.add('active');
+            frBtn.classList.remove('active');
+        });
+
+        frBtn.addEventListener('click', () => {
+            slider.style.transform = 'translateX(100%)';
+            frBtn.classList.add('active');
+            enBtn.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
