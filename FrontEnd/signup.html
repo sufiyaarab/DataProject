@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1">
+    <title>Knight & Shield Login</title>
+    <link rel="stylesheet" href="../css/signup.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="logo-image">
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Insurances ▾</button>
+                <div class="dropdown-content">
+                    <a href="#">Health Insurance</a>
+                    <a href="#">Life Insurance</a>
+                    <a href="#">Car Insurance</a>
+                </div>
+            </div>
+            <a href="#">Contact</a>
+            
+            <div class="lang-toggle">
+                <button id="en-btn">EN</button>
+                <button id="fr-btn">FR</button>
+                <div class="slider"></div>
+            </div>
+            
+            <a href="#" class="login-button">Login</a>
+        </nav>
+    </header>
+
+    <!-- Main container with two sections for login and mission statement -->
+    <main class="content-divider">
+        <section class="left-section">
+            <div class="mission-statement">
+                <img src="bear.png" alt="Cute Bear with Shield" class="bear-image">
+            </div>
+        </section>
+
+        <section class="right-section">
+            <div class="signup-form">
+                <h2>SIGNUP</h2>
+                <form>
+                    <input type="email" placeholder="Email" required>
+                    <input type="date" placeholder="DOB" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit" class="next-button">Next →</button>
+                </form>
+                <div class="login-section">
+                    <p>Already a Member?</p>
+                    <button class>Login</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Get references to language toggle buttons and slider
+    const enBtn = document.getElementById('en-btn');
+    const frBtn = document.getElementById('fr-btn');
+    const slider = document.querySelector('.slider');
+
+    // Add event listener for English button
+    enBtn.addEventListener('click', () => {
+        slider.style.transform = 'translateX(0)'; // Move the slider to the first position
+        enBtn.classList.add('active'); // Add active class to the English button
+        frBtn.classList.remove('active'); // Remove active class from the French button
+    });
+
+    // Add event listener for French button
+    frBtn.addEventListener('click', () => {
+        slider.style.transform = 'translateX(100%)'; // Move the slider to the second position
+        frBtn.classList.add('active'); // Add active class to the French button
+        enBtn.classList.remove('active'); // Remove active class from the English button
+    });
+
+</script>
+</body>
+</html>
