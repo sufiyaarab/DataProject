@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1200, initial-scale=1">
-    <title>Knight & Shield Login</title>
-    <link rel="stylesheet" href="signup.css">
+    <title>Knight & Shield Signup</title>
+    <link rel="stylesheet" href="../css/signup.css">
 </head>
 <body>
     <header>
@@ -29,56 +29,96 @@
                 <div class="slider"></div>
             </div>
             
-            <a href="#" class="login-button">Login</a>
+            <a href="login.html" class="login-button">Login</a>
         </nav>
     </header>
 
-    <!-- Main container with two sections for login and mission statement -->
+    <!-- Main container with two sections for signup -->
     <main class="content-divider">
+        <!-- Left section -->
         <section class="left-section">
             <div class="mission-statement">
                 <img src="bear.png" alt="Cute Bear with Shield" class="bear-image">
             </div>
         </section>
 
+        <!-- Right section -->
         <section class="right-section">
-            <div class="signup-form">
+            <div id="signup-step-1" class="signup-form">
                 <h2>SIGNUP</h2>
-                <form>
+                <form id="signup-form-step-1">
                     <input type="email" placeholder="Email" required>
                     <input type="date" placeholder="DOB" required>
                     <input type="password" placeholder="Password" required>
                     <input type="password" placeholder="Confirm Password" required>
-                    <button type="submit" class="next-button">Next →</button>
+                    <button type="button" class="next-button" onclick="goToNextStep()">Next →</button>
                 </form>
                 <div class="login-section">
                     <p>Already a Member?</p>
-                    <button class>Login</button>
-                </div>
+                    <a href="login.html">
+                        <button>Login</button>
+                    </a>
+                </div>                
+            </div>
+
+            <!-- Step 2 Form (hidden by default) -->
+            <div id="signup-step-2" class="signup-form" style="display: none;">
+                <h2>SIGNUP</h2>
+                <form id="signup-form-step-2">
+                    <div class="form-row">
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Street Name" required>
+                        <input type="text" placeholder="City" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Province" required>
+                        <input type="text" placeholder="Postal Code" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <!-- Back and Submit Buttons -->
+                    <div class="form-buttons">
+                        <button type="button" class="back-button" onclick="goToPreviousStep()">← Back</button>
+                        <button type="submit" class="signup-button">Sign up</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
 
     <script>
-        // Get references to language toggle buttons and slider
-    const enBtn = document.getElementById('en-btn');
-    const frBtn = document.getElementById('fr-btn');
-    const slider = document.querySelector('.slider');
+        // Function to go to the next step
+        function goToNextStep() {
+            document.getElementById('signup-step-1').style.display = 'none';
+            document.getElementById('signup-step-2').style.display = 'block';
+        }
 
-    // Add event listener for English button
-    enBtn.addEventListener('click', () => {
-        slider.style.transform = 'translateX(0)'; // Move the slider to the first position
-        enBtn.classList.add('active'); // Add active class to the English button
-        frBtn.classList.remove('active'); // Remove active class from the French button
-    });
+        // Function to go back to the previous step
+        function goToPreviousStep() {
+            document.getElementById('signup-step-2').style.display = 'none';
+            document.getElementById('signup-step-1').style.display = 'block';
+        }
 
-    // Add event listener for French button
-    frBtn.addEventListener('click', () => {
-        slider.style.transform = 'translateX(100%)'; // Move the slider to the second position
-        frBtn.classList.add('active'); // Add active class to the French button
-        enBtn.classList.remove('active'); // Remove active class from the English button
-    });
+        // Language toggle functionality
+        const enBtn = document.getElementById('en-btn');
+        const frBtn = document.getElementById('fr-btn');
+        const slider = document.querySelector('.slider');
 
-</script>
+        enBtn.addEventListener('click', () => {
+            slider.style.transform = 'translateX(0)';
+            enBtn.classList.add('active');
+            frBtn.classList.remove('active');
+        });
+
+        frBtn.addEventListener('click', () => {
+            slider.style.transform = 'translateX(100%)';
+            frBtn.classList.add('active');
+            enBtn.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
