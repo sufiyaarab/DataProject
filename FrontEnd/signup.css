@@ -46,19 +46,16 @@ nav a {
     font-size: 1.2rem;
 }
 
-/* Dropdown Button */
+/* Dropdown */
 .dropbtn {
-    background-color: transparent; /* Makes the dropdown button transparent */
-    border: none; /* Removes any border around the button */
-    color: #fff; /* Sets text color to match other links */
-    font-size: 1.2rem; /* Matches font size of other header links */
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
     font-family: 'Times New Roman', serif;
     cursor: pointer;
-    padding: 0; /* Removes padding to make it look like a link */
-    text-decoration: none; /* Removes underline */
 }
 
-/* Dropdown */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -67,11 +64,11 @@ nav a {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #618197; /* Background color for dropdown links */
+    background-color: #618197;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Optional shadow for dropdown content */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    border: 1px solid #0a2b42; /* Optional border for dropdown content */
+    border: 1px solid #0a2b42;
     border-radius: 5px;
 }
 
@@ -80,12 +77,10 @@ nav a {
     padding: 10px 16px;
     text-decoration: none;
     display: block;
-    background-color: transparent; /* Ensures dropdown link background is transparent */
-    font-size: 1rem;
 }
 
 .dropdown-content a:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Hover effect for dropdown items */
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .dropdown:hover .dropdown-content {
@@ -96,10 +91,10 @@ nav a {
 .lang-toggle {
     display: flex;
     position: relative;
-    width: 80px;        /* Keep the width the same */
-    height: 24px;       /* Reduce the height for a more compact look */
+    width: 80px;
+    height: 24px;
     background: #ddd;
-    border-radius: 12px; /* Adjust the border-radius to match the new height */
+    border-radius: 12px;
     margin-right: 1rem;
     overflow: hidden;
 }
@@ -109,22 +104,21 @@ nav a {
     background: transparent;
     border: none;
     color: #333;
-    font-size: 0.8rem;   /* Smaller font size */
+    font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
     z-index: 1;
-    line-height: 24px;   /* Center text vertically */
+    line-height: 24px;
 }
 
-/* Adjusted .slider for smaller active circle effect */
 .lang-toggle .slider {
     position: absolute;
-    top: 3px;            /* Position slightly lower to center within the container */
+    top: 3px;
     left: 3px;
-    width: 36px;         /* Slightly smaller width */
-    height: 18px;        /* Slightly smaller height */
+    width: 36px;
+    height: 18px;
     background-color: #fff;
-    border-radius: 10px; /* Smaller radius for a circular look */
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -137,36 +131,33 @@ nav a {
     align-items: center;
     gap: 1rem;
 }
-/* Login Button in Header */
+
 .login-button {
-    background-color: #c99e66;  /* Brown background color */
-    color: #000;                /* Black text color */
-    padding: 0.3rem 1.4rem;     /* Padding for size */
-    border-radius: 10px;        /* Rounded corners */
-    border: 2px solid #c99e66;  /* Border to match the background color */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for raised effect */
+    background-color: #c99e66;
+    color: #000;
+    padding: 0.3rem 1.4rem;
+    border-radius: 10px;
+    border: 2px solid #c99e66;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 1.2rem;
-    text-align: center;
     cursor: pointer;
     text-decoration: none;
-    display: inline-block;
 }
 
 .login-button:hover {
-    background-color: #fbd5b1;  /* Darker shade for hover effect */
+    background-color: #fbd5b1;
     border-color: #fbd5b1;
 }
 
-/* Main Content Divider */
 .content-divider {
     display: flex;
     width: 100%;
-    height: calc(100vh - 80px); /* Full viewport height minus header height */
+    height: calc(100vh - 80px);
 }
 
 .left-section {
     flex: 1;
-    background-color: #f4f4f4; /* Beige color for left section */
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,7 +166,7 @@ nav a {
 
 .right-section {
     flex: 1;
-    background-color: #618197; /* White color for right section */
+    background-color: #618197;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -183,100 +174,133 @@ nav a {
     padding: 2rem;
 }
 
-/* Login Form Styling */
-/* Login Form Container */
+/* Signup Form */
 .signup-form {
-    background-color: #d9d9d9;      /* Light gray background */
-    padding: 2rem;                  /* Padding for spacing */
-    border-radius: 10px;            /* Rounded corners */
-    width: 300px;                   /* Fixed width */
+    background-color: #d9d9d9;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Login Form Title */
 .signup-form h2 {
-    font-family: monospace;        /* Monospace font for title */
-    font-size: 1.5rem;             /* Adjust font size as needed */
-    color: #333;                   /* Dark color for text */
-    margin-bottom: 1rem;
-    text-align: left;              /* Align text to the left */
-    margin-left: 0.5rem;           /* Optional: small left margin for spacing */
+    font-family: monospace;
+    font-size: 1.7rem;
+    color: #333;
+    text-align: left;
+    margin-bottom: 0.8rem;
 }
 
-
 /* Input Fields */
-/* Input Fields */
-.signup-form input[type="email"],
-.signup-form input[type="date"], /* Fixed selector */
-.signup-form input[type="password"] {
+.signup-form input {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.8rem;
     margin: 0.5rem 0;
+    margin-bottom: 0.5rem;
     border-radius: 5px;
-    border: 1px solid #ccc;        /* Light gray border for input fields */
-    background-color: #ffffff;     /* White background */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
     font-size: 1rem;
-    color: #333;                   /* Dark color for text */
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Placeholder Text Styling */
-.signup-form input[type="email"]::placeholder,
-.signup-form input[type="date"]::placeholder,
-.signup-form input[type="password"]::placeholder {
-    color: #999;                   /* Gray placeholder text */
-    font-weight: normal;
+.signup-form input::placeholder {
+    color: #999;
 }
 
-/* Focus State for Input Fields */
-.signup-form input[type="email"]:focus,
-.signup-form input[type="date"]:focus,
-.signup-form input[type="password"]:focus {
-    border-color: #333;            /* Darker border color on focus */
-    outline: none;                 /* Removes default outline */
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); /* Subtle outer shadow on focus */
+.signup-form input:focus {
+    border-color: #333;
+    outline: none;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Form Rows for Additional Information */
+.form-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
 
-/* Login Button */
-.signup-form button[type="submit"] {
+.form-row input {
+    flex: 1;
+}
+
+/* Buttons */
+.signup-form button {
     width: 100%;
-    padding: 0.7rem;
-    background-color: #333;         /* Dark gray background */
-    color: #ffffff;                 /* White text */
+    padding: 0.8rem;
+    background-color: #333;
+    color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 2rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.login-section {
-    margin-top: 1.6rem;
-    color: #333;                    /* Dark color for text */
-    font-size: 1.1rem;
+.signup-form button:hover {
+    background-color: #555;
 }
 
+/* Back Button Specific Styling */
+.back-button {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Login Section */
 .login-section button {
-    width: 60%;
-    padding: 0.7rem;
-    background-color: #333;         /* Dark gray background */
-    color: #ffffff;                 /* White text */
+    width: 60%; /* Set width to 60% */
+    padding: 0.7rem; /* Space inside the button */
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0.5rem auto; /* Center button and add spacing */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+    display: block; /* Center button within container */
+}
+
+/* Hover Effect for Login Button */
+.login-section button:hover {
+    background-color: #555; /* Slightly lighter gray on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+
+/* Signup Button Specific to Step 2 */
+#signup-step-2 .signup-button {
+    width: 60%; /* Set width to 60% */
+    padding: 0.8rem;
+    background-color: #333;
+    color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 0.5rem;
+    margin: 1rem auto; /* Center button and add spacing */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block; /* Ensure button is centered */
 }
 
-/* "Not a Member?" Text Style */
-.login-section p {
-    margin: 0;
-    padding: 0;
+#signup-step-2 .signup-button:hover {
+    background-color: #555; /* Slightly lighter gray on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+#signup-step-2 .form-row {
+    margin-bottom: 0rem; /* Decrease bottom margin between rows */
 }
 
-
+/* Bear Image */
 .bear-image {
     width: 550px;
     height: auto;
