@@ -374,22 +374,22 @@ form .submit-button {
   text-transform: uppercase;
   letter-spacing: 3px;
   border-radius: 10px;
-  border: solid 1px #1034aa;
+  border: solid 1px #0a2b42;
   border-bottom: solid 1px #90c2ff;
-  background: linear-gradient(135deg, #0034de, #006eff);
+  background: linear-gradient(135deg, #0a2b42, #002e6b);
   color: #fff;
   font-weight: bolder;
   transition: all 0.2s ease;
   box-shadow:
     0px 2px 3px #000d3848,
-    inset 0px 4px 5px #0070f0,
-    inset 0px -4px 5px #002cbb;
+    inset 0px 4px 5px #90c2ff,
+    inset 0px -4px 5px #002e6b;
 }
 
 form .submit-button:active {
   box-shadow:
-    inset 0px 4px 5px #0070f0,
-    inset 0px -4px 5px #002cbb;
+    inset 0px 4px 5px #0a2b42,
+    inset 0px -4px 5px #002e6b;
   transform: scale(0.995);
 }
 
