@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cancel Policy</title>
+  <link rel="stylesheet" href="cancel.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="pictures/logo.png" alt="Knight & Shield Logo" class="logo-image">
+    </div>
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Insurances ▾</button>
+        <div class="dropdown-content">
+          <a href="#">Health Insurance</a>
+          <a href="#">Life Insurance</a>
+          <a href="#">Car Insurance</a>
+        </div>
+      </div>
+      <a href="#">Contact</a> 
+      <div class="btn-container">
+			  <label class="switch btn-color-mode-switch">
+		        <input value="1" id="color_mode" name="color_mode" type="checkbox">
+		        <label class="btn-color-mode-switch-inner" data-off="EN" data-on="FR" for="color_mode"></label>
+		    </label>
+	    </div>
+      <a href="#" class="logout-button">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="request-section">
+      <h1>Send Request to Cancel Policy</h1>
+      <p>We're sorry to see you go!</p>
+    </section>
+
+    <section class="form-section">
+      <form>
+        <h2>Cancellation Form</h2>
+        <!-- Policy Type Dropdown -->
+        <div class="input-field">
+          <select id="policy-type" class="policy-type" required>
+            <option value="" disabled selected></option>
+            <option value="life">Life</option>
+            <option value="house">House</option>
+            <option value="vehicle">Vehicle</option>
+            <option value="health">Health</option>
+          </select>
+          <label for="policy-type">Policy Type</label>
+        </div>
+      
+        <!-- Policy Number -->
+        <div class="input-field">
+          <input
+            id="policy-number"
+            class="policy-number"
+            type="text"
+            pattern="[0-9]*"
+            title="Enter numbers only"
+            required
+          />
+          <label for="policy-number">Policy Number</label>
+        </div>
+      
+        <!-- Effective Date -->
+        <div class="input-field">
+          <input
+            id="effective-date"
+            class="date-input"
+            type="date"
+            required
+          />
+          <label for="effective-date">Effective Date</label>
+        </div>
+      
+        <!-- Phone Number -->
+        <div class="input-field">
+          <input
+            id="phone-number"
+            class="phone-input"
+            type="text"
+            pattern="\(\d{3}\)-\d{3}-\d{4}"
+            placeholder="(XXX)-XXX-XXXX"
+            title="Phone number format: (XXX)-XXX-XXXX"
+            required
+          />
+          <label for="phone-number">Phone Number</label>
+        </div>
+
+        <!-- Reason for Cancellation -->
+        <div class="input-field">
+          <textarea
+            id="reason"
+            class="reason-input"
+            
+            required
+          ></textarea>
+          <label for="reason">Reason for Cancellation</label>
+        </div>
+      
+        <!-- Submit Button -->
+        <div class="btn-container">
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
+      </form>      
+      </div>
+      </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h4>Knight & Shield Insurance</h4>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Call Us</h5>
+          <p>Monday-Saturday</p>
+          <p>+123456789</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="cancel.js"></script>
+</body>
+</html>
+
+
