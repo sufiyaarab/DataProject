@@ -152,7 +152,7 @@ nav a {
 .content-divider {
     display: flex;
     width: 100%;
-    height: calc(100vh - 80px);
+    
 }
 
 .left-section {
@@ -169,9 +169,10 @@ nav a {
     background-color: #618197;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 2rem;
+    overflow-y: auto;
 }
 
 /* Signup Form */
@@ -221,7 +222,7 @@ nav a {
 .form-row {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
 }
 
 .form-row input {
@@ -240,16 +241,6 @@ nav a {
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.signup-form button:hover {
-    background-color: #555;
-}
-
-/* Back Button Specific Styling */
-.back-button {
-    width: 100%;
     margin-bottom: 1rem;
 }
 
@@ -276,32 +267,9 @@ nav a {
 }
 
 
-/* Signup Button Specific to Step 2 */
-#signup-step-2 .signup-button {
-    width: 60%; /* Set width to 60% */
-    padding: 0.8rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin: 1rem auto; /* Center button and add spacing */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    display: block; /* Ensure button is centered */
-}
-
-#signup-step-2 .signup-button:hover {
-    background-color: #555; /* Slightly lighter gray on hover */
-    transform: translateY(-2px); /* Slight upward movement on hover */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-}
-#signup-step-2 .form-row {
-    margin-bottom: 0rem; /* Decrease bottom margin between rows */
-}
-
 /* Bear Image */
 .bear-image {
     width: 550px;
     height: auto;
+    margin-top: -12rem;
 }
