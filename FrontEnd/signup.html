@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Knight & Shield Signup</title>
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Logo" class="logo-image">
+            <img src="../images/logo.png" alt="Logo" class="logo-image">
         </div>
         <nav>
             <a href="#">Home</a>
@@ -38,33 +38,22 @@
         <!-- Left section -->
         <section class="left-section">
             <div class="mission-statement">
-                <img src="bear.png" alt="Cute Bear with Shield" class="bear-image">
+                <img src="../images/bear.png" alt="Cute Bear with Shield" class="bear-image">
             </div>
         </section>
 
         <!-- Right section -->
         <section class="right-section">
-            <div id="signup-step-1" class="signup-form">
+            <div class="signup-form">
                 <h2>SIGNUP</h2>
-                <form id="signup-form-step-1">
+                <form>
+                    <!-- Basic Information -->
                     <input type="email" placeholder="Email" required>
                     <input type="date" placeholder="DOB" required>
                     <input type="password" placeholder="Password" required>
                     <input type="password" placeholder="Confirm Password" required>
-                    <button type="button" class="next-button" onclick="goToNextStep()">Next →</button>
-                </form>
-                <div class="login-section">
-                    <p>Already a Member?</p>
-                    <a href="login.html">
-                        <button>Login</button>
-                    </a>
-                </div>                
-            </div>
-
-            <!-- Step 2 Form (hidden by default) -->
-            <div id="signup-step-2" class="signup-form" style="display: none;">
-                <h2>SIGNUP</h2>
-                <form id="signup-form-step-2">
+                    
+                    <!-- Personal Details -->
                     <div class="form-row">
                         <input type="text" placeholder="First Name" required>
                         <input type="text" placeholder="Last Name" required>
@@ -80,30 +69,20 @@
                     <div class="form-row">
                         <input type="tel" placeholder="Phone Number" required>
                     </div>
-                    <!-- Back and Submit Buttons -->
-                    <div class="form-buttons">
-                        <button type="button" class="back-button" onclick="goToPreviousStep()">← Back</button>
-                        <button type="submit" class="signup-button">Sign up</button>
-                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" class="signup-button">Sign up</button>
                 </form>
+                <div class="login-section">
+                    <p>Already a Member?</p>
+                    <a href="login.html">
+                        <button type="button" class="login-button">Login</button>
+                    </a>
+                </div>                
             </div>
         </section>
     </main>
-
     <script>
-        // Function to go to the next step
-        function goToNextStep() {
-            document.getElementById('signup-step-1').style.display = 'none';
-            document.getElementById('signup-step-2').style.display = 'block';
-        }
-
-        // Function to go back to the previous step
-        function goToPreviousStep() {
-            document.getElementById('signup-step-2').style.display = 'none';
-            document.getElementById('signup-step-1').style.display = 'block';
-        }
-
-        // Language toggle functionality
         const enBtn = document.getElementById('en-btn');
         const frBtn = document.getElementById('fr-btn');
         const slider = document.querySelector('.slider');
