@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment History Breakdown</title>
+  <link rel="stylesheet" href="pay-his.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="pictures/logo.png" alt="Knight & Shield Logo" class="logo-image">
+    </div>
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Insurances ▾</button>
+        <div class="dropdown-content">
+          <a href="#">Health Insurance</a>
+          <a href="#">Life Insurance</a>
+          <a href="#">Car Insurance</a>
+        </div>
+      </div>
+      <a href="#">Contact</a>
+      <div class="btn-container">
+        <label class="switch btn-color-mode-switch">
+          <input value="1" id="color_mode" name="color_mode" type="checkbox">
+          <label class="btn-color-mode-switch-inner" data-off="EN" data-on="FR" for="color_mode"></label>
+        </label>
+      </div>
+      <a href="#" class="logout-button">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="request-section">
+      <div class="header-section">
+        <div class="text-section">
+          <h1>Payment History Breakdown</h1>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </section>
+    
+    <div class="page-container">
+      <!-- Table Section -->
+      <section class="table-section">
+        <div class="table-container">
+          <table id="payment-table">
+            <thead>
+              <tr>
+                <th>Payment ID</th>
+                <th>Policy Name</th>
+                <th>User Name</th>
+                <th>Amount</th>
+                <th>Date Paid</th>
+                <th>Method</th>
+              </tr>
+            </thead>
+            <tbody id="payment-table-body">
+              <!-- Data will be dynamically loaded via JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+  
+      <!-- Pagination -->
+      <div class="pagination" id="pagination"></div>
+  
+      <!-- Button Section -->
+      <div class="button-container">
+        <button class="download-button" onclick="downloadPDF()">Download as PDF</button>
+      </div>
+  
+      <!-- Trends Section -->
+      <div class="trends-section">
+        <h2>Payment Trends</h2>
+        <canvas id="payment-trends-chart"></canvas>
+      </div>
+    </div>
+  </main>
+  
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h4>Knight & Shield Insurance</h4>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Call Us</h5>
+          <p>Monday-Saturday</p>
+          <p>+123456789</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="pay-his.js"></script>
+</body>
+</html>
