@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aboutUs.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="logo-image">
+        </div>
+        <nav>
+        
+             <a href="home.html" class="main-buttons">Home</a>
+             <a href="policies.html" class="main-buttons">Policies</a>
+             <a href="dashboard.html" class="main-buttons">Dashboard</a>
+             <a href="aboutUs.html" class="main-buttons">About Us</a>
+             <a href="login.html" class="main-buttons">Login</a>
+                       
+            <div class="lang-toggle">
+                <button id="en-btn">EN</button>
+                <button id="fr-btn">FR</button>
+                <div class="slider"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <script>
+        const enBtn = document.getElementById('en-btn');
+        const frBtn = document.getElementById('fr-btn');
+        const slider = document.querySelector('.slider');
+
+        enBtn.addEventListener('click', () => {
+            slider.style.transform = 'translateX(0)';
+            enBtn.classList.add('active');
+            frBtn.classList.remove('active');
+        });
+
+        frBtn.addEventListener('click', () => {
+            slider.style.transform = 'translateX(100%)';
+            frBtn.classList.add('active');
+            enBtn.classList.remove('active');
+        });
+    </script>
+
+    <hr>
+
+    <div class="title-section">
+        <p>About Knight & Shield Insurance</p>
+    </div>
+
+
+    <div class="info-section">
+        <p>At Knight & Shield Insurance, our team is dedicated to offering you the peace of mind, exceptional service, security and consistency you would expect. Our insurance company has proven reliability to more than 5 million policyholders for over 15 years. <br><br>In just a few minutes, we can provide complete protection for your most valuable assets, tailored to suit all your needs with our data-driven analytics system. Whether that is protecting your home or vehicle, or securing your family's future or health, we have got you covered. <br><br> Our commitment is to you; we will be there for every step of the journey, especially when it matters most. Join us and let us build a secure future together. </p>
+    </div>
+
+     <footer>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h4>&copy; 2024 Your Company Name. All Rights Reserved.</h4>
+      </div>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h5>Call Us</h5>
+          <p>Monday-Saturday</p>
+          <p>+123456789</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
+
+</body>
+</html>
