@@ -1,0 +1,430 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #0a2b42;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    background-color: #0a2b42;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 6px solid #C7A04B; /* Gold border at the bottom */
+}
+
+header .logo img {
+    width: 200px; /* Increase the width of the logo */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+
+nav {
+    display: flex;
+    gap: 1.5rem; /* Adjust the spacing between the buttons */
+}
+
+.nav-btn, .language-btn {
+    margin: 0; /* Remove any individual margins (optional) */
+}
+
+
+.nav-btn, .language-btn, .registerToday-btn, .insurance-btn {
+    padding: 0.35rem 1.0rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    background-color: #C7A04B;
+    background: linear-gradient(135deg, #C7A04B, #9d792a);
+    color: #0a2b42;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-btn:hover, .language-btn:hover, .registerToday-btn:hover, .insurance-btn:hover {
+    color: white;
+    background: linear-gradient(135deg, #9d792a, #C7A04B);
+    transform: scale(1.05);
+}
+
+.registerToday-btn {
+    margin-top: 2rem;
+    padding: 0.3rem 1.3rem; /* Increases the button size */
+    font-size: 1.2rem; /* Makes the text larger */
+    border-radius: 5px; /* Adjusts the rounded corners */
+    letter-spacing: 0.5px;
+}
+
+/* Main Section */
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #1a4d6e, #0a2b42);
+    color: white;
+    border-bottom: 6px solid #C7A04B; /* Gold border at the bottom */
+}
+
+.content {
+    max-width: 600px; /* Restricts the width of the text */
+    margin: 0 auto; /* Centers the content horizontally */
+    text-align: left; /* Ensures the text is centered */
+}
+
+.description {
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+
+.main-image {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Trusted Section */
+.trusted-section {
+    background-color: #ffffff;
+    color: #0a2b42;
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom: 6px solid #C7A04B; /* Gold border at the bottom */
+}
+
+.trusted-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.trusted-badge {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.trusted-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.stat h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Insurance Types Section */
+.insurance-types {
+    padding: 2rem;
+    background-color: #0a2b42;
+    color: white;
+    text-align: center;
+    border-bottom: 6px solid #C7A04B;
+}
+
+.insurance-Types-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two equal-width columns */
+    gap: 2rem; /* Adjust spacing between rows and columns */
+    justify-content: center; /* Centers the grid content */
+}
+
+
+.insurance-types h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.insurance-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.insurance-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background-color: #1a4d6e;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative; /* Ensures proper positioning for content and image */
+}
+
+.insurance-pic {
+    width: 275px;
+    height: auto;
+    border-radius: 8px; /* Optional: Rounded corners for the image */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    margin-left: auto; /* Pushes the image to the right */
+}
+
+
+.insurance-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.insurance-content {
+    flex: 1;
+}
+
+.insurance-content h3 {
+    font-size: 1.5rem;
+    color: #C7A04B;
+    margin-bottom: 1rem;
+}
+
+.insurance-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.insurance-content ul li {
+    list-style-type: disc; /* Adds classic bullet points */
+    margin-left: 1.5rem; /* Indents the text for bullets */
+    padding-left: 0;
+    position: inherit; /* Removes the custom arrow positioning */
+}
+
+.insurance-content ul li:before {
+    content: none; /* Removes the custom arrow (→) */
+}
+
+/* Choose a Plan Section */
+.choose-plan-section {
+    padding: 2rem;
+    background-color: white; /* White background */
+    color: #0a2b42;
+    text-align: center;
+    border-bottom: 6px solid #C7A04B;
+}
+
+.choose-plan-section h2 {
+    font-size: 2rem;
+    color: #0a2b42;
+    margin-bottom: 2rem;
+}
+
+.choose-plan-section .insurance-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.choose-plan-section .insurance-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    background-color: #1a4d6e; /* Light gray for card background */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+}
+
+.choose-plan-section .insurance-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.choose-plan-section .insurance-content {
+    flex: 1;
+}
+
+.choose-plan-section .insurance-content h3 {
+    font-size: 1.5rem;
+    color: #C7A04B; /* Gold color for titles */
+    margin-bottom: 1rem;
+}
+
+.choose-plan-section .insurance-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+/* Match Choose a Plan text format with Insurance Types */
+.choose-plan-section .insurance-content ul li {
+    list-style-type: disc; /* Add bullet points */
+    margin-left: 1.5rem; /* Indent the text */
+    padding-left: 0; /* Ensure no extra padding */
+    line-height: 1.6; /* Match line height */
+    color: #ffffff; /* Set text color to match */
+}
+
+.choose-plan-section .insurance-content {
+    font-family: 'Montserrat', sans-serif; /* Match font family */
+    font-size: 1rem; /* Match font size */
+    color: #ffffff; /* Match text color */
+}
+
+
+.choose-plan-section .insurance-pic {
+    width: 175px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.explore-plans-btn {
+    padding: 0.5rem 2rem;
+    width: auto;
+    display: inline-block; /* Ensure it stays inline */
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center; /* Center text */
+    background-color: #C7A04B;
+    background: linear-gradient(135deg, #C7A04B, #9d792a);
+    color: #0a2b42;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+}
+
+.explore-plans-btn:hover {
+    background: linear-gradient(135deg, #9d792a, #C7A04B);
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* Reviews Section */
+.reviews-section {
+    padding: 2rem;
+    background-color: #0a2b42;
+    text-align: center;
+    position: relative;
+    
+}
+
+.reviews-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.reviews-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.carousel-btn {
+    background: none;
+    border: none;
+    color: #0a2b42;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 1rem;
+    transition: transform 0.3s ease;
+}
+
+.carousel-btn:hover {
+    transform: scale(1.2);
+}
+
+.reviews-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll; /* Allows horizontal scrolling */
+    overflow-y: hidden; /* Hides vertical scrollbar */
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    padding: 1rem 0;
+    max-width: 80%;
+}
+
+.review-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 3px solid #C7A04B;
+    color: #0a2b42;
+    flex: 0 0 calc(33.33% - 1rem); /* Ensures 3 cards fit into view */
+    max-width: calc(33.33% - 1rem);
+    box-sizing: border-box;
+}
+
+.review-card p {
+    text-align: left;
+    margin: 0.5rem 0;
+}
+
+.reviews-grid::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+.review-rating {
+    font-size: 1.2rem;
+    color: #C7A04B;
+    margin-bottom: 0.5rem;
+}
+
+.review-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #C7A04B;
+}
+
+.reviewer-info {
+    text-align: left;
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #0a2b42;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}

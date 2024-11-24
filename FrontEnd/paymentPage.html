@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Knight Shield Insurance - Payment</title>
+    <link rel="stylesheet" href="paymentStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Knight Shield Logo">
+        </div>
+        <nav>
+            <button class="nav-btn">Home</button>
+            <button class="nav-btn">Policies</button>
+            <button button onclick="window.location.href='dashboard.html'"class="nav-btn">Dashboard</button>
+            <button class="nav-btn">About</button>
+            <button class="language-btn">EN/FR</button>
+        </nav>
+    </header>
+    
+
+    <!-- Main Section -->
+    <main class="main-section">
+        <div class="content">
+            <h1 class="title">Payment</h1>
+            <button class="history-button">View Payment History</button>
+        </div>
+    </main>
+
+<!-- Form Section -->
+<section class="form-section">
+    <h2>Payment Form</h2>
+    <form>
+        <!-- Select Policy -->
+        <div class="form-group">
+            <label for="policy">Select Policy</label>
+            <select id="policy" name="policy">
+                <option value="" disabled selected>Select a policy</option>
+            </select>
+        </div>
+
+        <!-- Card Details -->
+        <h3>Card Details</h3>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="cardholder">Cardholder Name</label>
+                <input type="text" id="cardholder" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" placeholder="1234 5678 9101 1121">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="expiry">Expiry Date</label>
+                <input type="text" id="expiry" placeholder="MM/YY">
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123">
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="text" id="amount" placeholder="Enter amount">
+            </div>
+        </div>
+
+        <!-- Billing Information -->
+        <h3>Billing Information</h3>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" placeholder="John">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" placeholder="Doe">
+            </div>
+        </div>
+
+        <!-- Payment Method -->
+        <h3>Payment Method</h3>
+        <div class="form-group">
+            <label for="payment-method">Select a method</label>
+            <select id="payment-method" name="payment-method">
+                <option value="" disabled selected>Select a method</option>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Bank Transfer</option>
+            </select>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-row">
+            <button type="submit" class="pay-btn">Pay Now</button>
+            <button onclick="window.location.href='dashboard.html'" type="button" class="back-btn">Back to Dashboard</button>
+        </div>
+    </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchUserPolicies();
+    
+            // Form validation
+            (function () {
+                'use strict';
+                const forms = document.querySelectorAll('.needs-validation');
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                        if (!form.checkValidity()) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            })();
+        });
+    
+        // Fetch user policies and populate the dropdown
+        async function fetchUserPolicies() {
+            try {
+                const response = await fetch('/api/user-policies');
+                if (!response.ok) throw new Error('Failed to fetch user policies');
+                const policies = await response.json();
+                populatePolicyDropdown(policies);
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to load policies.');
+            }
+        }
+    
+        function populatePolicyDropdown(policies) {
+            const policySelect = document.getElementById('policy');
+            policySelect.innerHTML = '<option value="" disabled selected>Select a policy</option>';
+            policies.forEach(policy => {
+                const option = document.createElement('option');
+                option.value = policy.Policy_ID;
+                option.textContent = `${policy.Policy_Name} - $${policy.Premium}`;
+                policySelect.appendChild(option);
+            });
+        }
+    
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+    
+            // Gather form data
+            const policyId = document.getElementById('policy').value;
+            const paymentAmount = parseFloat(document.getElementById('amount').value);
+            const paymentMethod = document.getElementById('payment-method').value;
+            const cardholderName = document.getElementById('cardholder').value;
+            const cardNumber = document.getElementById('card-number').value;
+            const expiry = document.getElementById('expiry').value;
+            const cvv = document.getElementById('cvv').value;
+    
+            // Validate required fields
+            if (!policyId || !paymentAmount || !paymentMethod || !cardholderName || !cardNumber || !expiry || !cvv) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+    
+            try {
+                // Send payment request
+                await makePayment({
+                    policyId,
+                    paymentAmount,
+                    paymentMethod,
+                    cardholderName,
+                    cardNumber,
+                    expiry,
+                    cvv,
+                });
+    
+                alert('Payment successful!');
+                window.location.href = 'dashboard.html'; // Redirect to dashboard
+            } catch (error) {
+                console.error('Payment error:', error);
+                alert('Payment failed. Please try again.');
+            }
+        });
+    
+        // Function to send payment data to the backend
+        async function makePayment(data) {
+            const response = await fetch('/api/pay-now', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+    
+            if (!response.ok) throw new Error('Payment failed.');
+        }
+    </script>
+    
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2024 Knight & Shield Insurance. All rights reserved.</p>
+    </footer>
+</body>
+</html>

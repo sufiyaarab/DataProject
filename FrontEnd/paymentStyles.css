@@ -1,0 +1,300 @@
+/* Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    background-color: #0a2b42;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 6px solid #C7A04B; /* Gold border at the bottom */
+
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 250px; /* Adjust the width to make the logo bigger */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: none; /* Remove height restrictions if applied */
+}
+
+nav {
+    display: flex;
+    gap: 2.5rem; /* Increases the spacing between buttons */
+}
+
+.nav-btn, .language-btn {
+    padding: 0.35rem 1.0rem; /* Adjust button size */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    font-size: 0.9rem;
+     /* Increases button size */
+    background-color: #ccc;
+    color: #00164d;
+    border: none;
+     /* Makes the font slightly larger */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: #C7A04B;
+    background: linear-gradient(135deg, #C7A04B, #9d792a);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-btn:hover, .language-btn:hover {
+    color: white;
+    background: linear-gradient(135deg, #9d792a, #C7A04B);
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+
+.language-btn {
+    font-weight: bold;
+}
+
+/* Main Section */
+.main-section {
+    background: linear-gradient(to bottom, #003366, #0a2b42);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    border-bottom: 6px solid #C7A04B; /* Gold border at the bottom */
+}
+
+
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #C7A04B;
+    margin: 0.5rem auto;
+    border-radius: 2px;
+}
+
+.history-button {
+    background: linear-gradient(135deg, #C7A04B, #9d792a);
+    border: none;
+    border-radius: 30px;
+    padding: 0.45rem 2rem;
+    font-size: 1.0rem;
+    color: #00164d;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.history-button:hover {
+    background: linear-gradient(135deg, #9d792a, #C7A04B);
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+/* Form Section */
+.form-section {
+    padding: 2rem;
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 10px; /* Rounded corners */
+    border: 5px solid #C7A04B; /* Gold border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+
+.form-section h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #00164d;
+}
+
+.form-section h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #00164d;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Buttons */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.pay-btn {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: #C7A04B; /* Blue button */
+    color: #00164d;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.pay-btn:hover {
+    background-color: #0a2b42;
+    color: white;
+}
+
+.back-btn {
+    flex: 1;
+    padding: 0.75rem;
+    background-color: #C7A04B; /* Gray button */
+    color: #00164d;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+    background-color: #0a2b42;
+    color: white;
+}
+
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #C7A04B;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #00164d;
+    font-weight: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #C7A04B;
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Footer */
+.main-footer {
+    background-color: #0a2b42;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    }
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .history-button {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-section {
+        margin-bottom: 2rem;
+    }
+}
