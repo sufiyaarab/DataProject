@@ -71,8 +71,9 @@ b. Ensure nodes and npm are present using
     
 13.a Start the Admin Application by running the following in the terminal
     
-        a. node adminapp.js
-        b. If everything is set up correctly, you should get this message:
+        a. Insure you are already in Admin project folder and have the files open in the files
+        b. head to the terminal and run node adminapp.js
+        c. If everything is set up correctly, you should get this message:
         Server is running on http://localhost:3003
         Connected to MySQL database.
     
