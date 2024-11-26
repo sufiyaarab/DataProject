@@ -9,7 +9,7 @@ Before starting, ensure the following are installed on your system:
 
    a. Option 1: Clone the repository using Git:
 
-       git clone https://github.com/yordanostk/DataGroupProject
+       git clone https://github.com/yordanostk/DataGroupProject/tree/main/ProjectFile
 
    b. Option 2: Download the repository as a ZIP file:
 
