@@ -69,7 +69,7 @@ b. Ensure nodes and npm are present using
         Server is running on http://localhost:3001
         Connected to MySQL database.
     
-13.a Start the Application by running the following in the terminal
+13.a Start the Admin Application by running the following in the terminal
     
         a. node adminapp.js
         b. If everything is set up correctly, you should get this message:
