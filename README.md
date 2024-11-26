@@ -25,7 +25,7 @@ Before starting, ensure the following are installed on your system:
 
 6. Create project workspace. This should be located in the same directory as node_modules and .vscode. 
    
-7. Set up the database using the DUMPFILE you downloaded.
+7. Set up the database using the DataBase(imports) you downloaded.
 
         a. Open MySQL Workbench
         b. Locate the database files provided in the project folder (e.g., database.sql).
