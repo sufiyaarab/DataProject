@@ -60,7 +60,7 @@ b. Ensure nodes and npm are present using
         ii. npm install express-session
         iii. npm install bcrypt
         iv. npm install crypto
-        v. npm install email-jscom
+        v. npm install emailjs-com
     
 13. Start the Application by running the following in the terminal
     
