@@ -7,7 +7,7 @@ Before starting, ensure the following are installed on your system:
     
 1. Clone or Download the Project
         a. Option 1: Clone the repository using Git: git clone
-        https://github.com/username/repository-name.git
+        https://github.com/yordanostk/DataGroupProject
         b. Option 2: Download the repository as a ZIP file:
         i. Navigate to the GitHub repository page.
         ii. Click the green Code button and select Download ZIP.
