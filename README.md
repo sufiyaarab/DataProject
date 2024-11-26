@@ -4,6 +4,7 @@ Before starting, ensure the following are installed on your system:
     - MySQL (for database management)
     - VS Code or any code editor of your choice
     - npm (Node Package Manager, comes with Node.js)
+    
 1. Clone or Download the Project
         a. Option 1: Clone the repository using Git: git clone
         https://github.com/username/repository-name.git
@@ -11,7 +12,8 @@ Before starting, ensure the following are installed on your system:
         i. Navigate to the GitHub repository page.
         ii. Click the green Code button and select Download ZIP.
         iii. Extract the downloaded ZIP file to a folder of your choice.
-2. Set up the database: Locate database.sql in the project folder. Use database files to import
+   
+3. Set up the database: Locate database.sql in the project folder. Use database files to import
 database structure into MySQL server. In MySQL Workbench, open SQL script, select the .sql
 file, and execute
         a. Open MySQL Workbench
@@ -19,12 +21,13 @@ file, and execute
         c. Import the database structure:
         i. Open your MySQL client and create a new database (e.g., project_db).
         ii. Import the SQL file to set up the tables and structure: SOURCE
-3. Configure Database Connection:
+   
+5. Configure Database Connection:
         a. Open db.js
         b. Configure settings to insure it is connected to database; update any credentials in vs code
         to match with Workbench credentials
            NOTE: you'll need to alter the user and password.
-5. Install Node.js Dependencies
+6. Install Node.js Dependencies
         a. Open your terminal or command prompt and navigate to the project folder: cd
         /path/to/project-folder
 b. Ensure nodes and npm are present using
@@ -33,12 +36,12 @@ b. Ensure nodes and npm are present using
         otherwise run these commands in terminal
         iii. npm init -y
         iv. npm install express mysql2 body-parser express-session
-6. Start the Application by running the following in the terminal
+7. Start the Application by running the following in the terminal
         a. node app.js
         b. If everything is set up correctly, you should get this message:
         Server is running on http://localhost:3001
         Connected to MySQL database.
-7. Access the Application
+8. Access the Application
         a. Open your web browser.
         b. Navigate to the following URL to access the login page
         i. localhost:3001/login.html
